@@ -1,0 +1,21 @@
+<style>
+	font-family: Verdana;
+	color: red;
+</style>
+
+<script>
+	function hideComments() {
+		var rows = document.getElementsByClassName('subtext');
+		for (var i = 0; i < rows.length; i+=1) {
+			var row = rows[i];
+			var tags = row.getElementsByTagName('a');
+			if (tags.length >= 2) {
+				row.removeChild(tags[1]);
+			}
+		}
+	}
+
+	hideComments()
+</script>
+
+<h1>Oh hi</h1>
