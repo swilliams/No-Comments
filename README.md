@@ -1,0 +1,2 @@
+# No Comments on HN
+I've gotten a little tired of the majority of the comments on Hacker News. The problem is that I have too much muscle memory built in to just stop clicking the "X Comments" links. So I cooked this little thing up to just hide them all. 
