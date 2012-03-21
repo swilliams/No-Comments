@@ -17,7 +17,7 @@ function removeIndexComments() {
 function removeComments() {
 	var tables = document.getElementsByTagName('table'),
 	    comments = tables[3];
-	comments.innerHTML = '';
+	comments.innerHTML = '<tr><td><h1>No Comments, Dummy</h1></td></tr>';
 }
 
 var url = location.href;
