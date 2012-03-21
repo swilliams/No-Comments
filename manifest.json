@@ -2,11 +2,11 @@
   "name": "No HN Comments",
   "version": "1.0",
   "description": "Comments on HN posts have gotten ridiculous. This hides them.",
-  "browser_action": {
-    "default_icon": "icon.png",
-    "popup": "popup.html"
-  },
-  "permissions": [
-    ""
+
+  "content_scripts": [
+  	{
+  		"matches": ["http://news.ycombinator.com/*"],
+  		"js": ["script.js"]
+  	}
   ]
 }
