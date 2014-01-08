@@ -14,6 +14,25 @@ function removeIndexComments() {
 	}
 }
 
+function removeKeyword(keyword) {
+    var tags = document.querySelectorAll('td.title > a');
+    var re = new RegExp(keyword);
+    for (var i = 0; i < tags.length; i+=1) {
+        var tag = tags[i];
+        if (re.test(tag.text)) {
+            removeRow(tag);
+        }
+    }
+}
+
+function removeRow(tag) {
+    var td = tag.parentElement;
+    var tr = td.parentElement;
+    tr.nextSibling.remove();
+    tr.nextSibling.remove();
+    tr.remove();
+}
+
 function removeComments() {
 	var tables = document.getElementsByTagName('table'),
 	    comments = tables[3];
@@ -25,4 +44,5 @@ if (url.search('item') > 0) {
 	removeComments();
 } else {
 	removeIndexComments();
+    removeKeyword('Swartz');
 }
